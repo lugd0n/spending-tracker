@@ -1,3 +1,25 @@
-<p>spending-list works!</p>
 
-<app-spending-item></app-spending-item>
+
+<div class="container mt-3">
+  <h2>Spendings</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let expendentiure of spendings">
+        <td>{{expendentiure.name}}</td>
+        <td>{{expendentiure.amount}}</td>
+      </tr>
+      <tr class="table-dark">
+        <td>Sum</td>
+        <td>{{sum}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
