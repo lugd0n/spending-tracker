@@ -1,4 +1,4 @@
 export class ExpedentiureModel {
-  name: string;
+  type: string;
   amount: number;
 }

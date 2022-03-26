@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ExpedentiureModel } from '../model/expenditure.model';
 
@@ -5,22 +6,15 @@ import { ExpedentiureModel } from '../model/expenditure.model';
   providedIn: 'root'
 })
 export class SpendingService {
+  API_URL = 'http://localhost:3000/user';
 
 
-  private spendings: ExpedentiureModel[] = [
-    { name: "rent", amount: 500 },
-    { name: "insurance", amount: 200 },
-    { name: "holiday", amount: 300 }];
+  constructor(private http: HttpClient) { }
 
-  constructor() { }
+  public getSpendings() {
+    console.log("get spendings at", this.API_URL);
+    return this.http.get<any>(this.API_URL);
 
-
-  public getSpendings(): ExpedentiureModel[] {
-    return this.spendings;
   }
 
-  public getTotalSpending(): number {
-
-    return this.spendings.reduce((n, { amount }) => n + amount, 0);
-  }
 }

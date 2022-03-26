@@ -2,10 +2,19 @@
   "user": [
     {
       "id": 1,
-      "spendings": {
-        "type": "rent",
-        "amount":  "500"
-      }
+      "spendings": 
+        [
+          {
+            "type": "rent",
+            "amount": "500"
+          },
+          {
+            "type": "shopping",
+            "amount": "1000"
+          }
+        ]
+      
     }
   ]
 }
+
