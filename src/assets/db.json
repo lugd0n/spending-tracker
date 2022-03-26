@@ -1,0 +1,11 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "spendings": {
+        "type": "rent",
+        "amount":  "500"
+      }
+    }
+  ]
+}
