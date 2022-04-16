@@ -1,3 +1,4 @@
+import { ViewEncapsulation } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { ExpedentiureModel } from '../model/expenditure.model';
@@ -7,7 +8,7 @@ import { SpendingService } from '../services/spending-service.service';
 @Component({
   selector: 'app-spending-list',
   templateUrl: './spending-list.component.html',
-  styleUrls: ['./spending-list.component.scss']
+  styleUrls: ['./spending-list.component.scss'],
 })
 export class SpendingListComponent implements OnInit {
 
