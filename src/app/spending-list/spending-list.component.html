@@ -1,5 +1,3 @@
-
-
 <div class="container mt-3">
   <h2>Spendings</h2>
   <table class="table table-striped">
@@ -15,13 +13,14 @@
         <td>{{expendentiure.type}}</td>
         <td>{{expendentiure.amount}}</td>
         <td>
-          <button type="button" class="btn btn-outline-danger"(click)="onAdd()">-</button>
-          </td>      </tr>
+          <button type="button" class="btn btn-outline-danger" (click)="onDelete()">-</button>
+        </td>
+      </tr>
       <tr class="table-dark">
         <td>Sum</td>
         <td>{{sum}}</td>
         <td>
-        <button type="button" class="btn btn-outline-success" (click)="onAdd()">+</button>
+          <button type="button" class="btn btn-outline-success" (click)="onAdd()">+</button>
         </td>
       </tr>
 
