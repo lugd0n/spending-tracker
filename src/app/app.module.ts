@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SpendingListComponent } from './spending-list/spending-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,9 +19,11 @@ import { MatSliderModule } from '@angular/material/slider';
     HttpClientModule,
     BrowserAnimationsModule,
     MatSliderModule,
+    ReactiveFormsModule,
   ],
   
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+}

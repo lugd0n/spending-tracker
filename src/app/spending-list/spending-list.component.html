@@ -16,6 +16,26 @@
           <button type="button" class="btn btn-outline-danger" (click)="onDelete()">-</button>
         </td>
       </tr>
+
+      <tr>
+        <div *ngIf="addsItem">
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <td>
+            <label for="type"></label>
+            <input class="form-control" id="type" type="text" placeholder="Type" formControlName="type">
+          </td>
+          <td>
+            <label for="amount"></label>
+            <input class="form-control" id="amount" type="text" placeholder="Amount" formControlName="amount">
+          </td>
+          <td>
+            <button type="submit" class="btn btn-outline-success">submit</button>
+          </td>
+          </form>
+        </div>
+
+      </tr>
+
       <tr class="table-dark">
         <td>Sum</td>
         <td>{{sum}}</td>
@@ -27,3 +47,4 @@
     </tbody>
   </table>
 </div>
+
