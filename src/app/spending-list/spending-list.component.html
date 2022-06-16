@@ -14,10 +14,15 @@
       <tr *ngFor="let expendentiure of spendings">
         <td>{{expendentiure.type}}</td>
         <td>{{expendentiure.amount}}</td>
-      </tr>
+        <td>
+          <button type="button" class="btn btn-outline-danger"(click)="onAdd()">-</button>
+          </td>      </tr>
       <tr class="table-dark">
         <td>Sum</td>
         <td>{{sum}}</td>
+        <td>
+        <button type="button" class="btn btn-outline-success" (click)="onAdd()">+</button>
+        </td>
       </tr>
 
     </tbody>

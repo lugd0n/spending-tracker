@@ -14,6 +14,7 @@ export class SpendingListComponent implements OnInit {
 
   spendings: ExpedentiureModel[] = [];
   sum: number;
+  private addsItem: boolean = false;
   public listChanged$ = new BehaviorSubject<boolean>(false);
 
   constructor(private spendingService: SpendingService) { }
@@ -30,6 +31,15 @@ export class SpendingListComponent implements OnInit {
     this.listChanged$.subscribe({
       next: (v) => this.sum = this.spendings.reduce((n, { amount }) => n + +amount, 0)
     })
+  }
+
+
+  onAdd(){
+    this.addsItem = !this.addsItem;
+  }
+
+  onDelete(){
+    //todo
   }
 
 
