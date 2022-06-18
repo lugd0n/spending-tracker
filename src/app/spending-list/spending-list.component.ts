@@ -1,6 +1,5 @@
 import { ViewEncapsulation } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
 import { BehaviorSubject } from 'rxjs';
 import { ExpedentiureModel } from '../model/expenditure.model';
 import { UserModel } from '../model/user.model';
@@ -13,15 +12,12 @@ import { SpendingService } from '../services/spending-service.service';
 })
 export class SpendingListComponent implements OnInit {
 
+  
   spendings: ExpedentiureModel[] = [];
   sum: number;
   addsItem: boolean = false;
   public listChanged$ = new BehaviorSubject<boolean>(false);
 
-  form = new FormGroup({
-    type: new FormControl(''),
-    amount: new FormControl(''),
-  });  
 
   constructor(private spendingService: SpendingService) { }
 
@@ -48,8 +44,5 @@ export class SpendingListComponent implements OnInit {
     //todo
   }
 
-  onSubmit(){
-    console.log('submitted');
-    console.log(this.form.value)
-  }
+
 }
