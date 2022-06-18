@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { SpendingService } from 'src/app/services/spending-service.service';
 
 
 @Component({
@@ -9,16 +10,13 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class SpendingFormularComponent implements OnInit {
 
-  @Input() addsItem: boolean = false;
-
-
   form = new FormGroup({
     type: new FormControl(''),
     amount: new FormControl(''),
   });  
 
 
-  constructor() { }
+  constructor(private spendingService: SpendingService) { }
 
   ngOnInit(): void {
   }
@@ -26,6 +24,9 @@ export class SpendingFormularComponent implements OnInit {
   onSubmit(){
     console.log('submitted');
     console.log(this.form.value)
+
+    this.spendingService.addSpending(this.form.value);
+
   }
 
 }
