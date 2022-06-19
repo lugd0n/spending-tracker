@@ -1,5 +1,3 @@
-
-
 <div class="container mt-3">
   <h2>Spendings</h2>
   <table class="table table-striped">
@@ -14,12 +12,29 @@
       <tr *ngFor="let expendentiure of spendings">
         <td>{{expendentiure.type}}</td>
         <td>{{expendentiure.amount}}</td>
+        <td>
+          <button type="button" class="btn btn-outline-danger" (click)="onDelete()">-</button>
+        </td>
       </tr>
+
+      <div *ngIf="addsItem">
+        <tr>
+          <app-spending-formular></app-spending-formular>
+  
+        </tr>
+
+      </div>
+
+
       <tr class="table-dark">
         <td>Sum</td>
         <td>{{sum}}</td>
+        <td>
+          <button type="button" class="btn btn-outline-success" (click)="onAdd()">+</button>
+        </td>
       </tr>
 
     </tbody>
   </table>
 </div>
+

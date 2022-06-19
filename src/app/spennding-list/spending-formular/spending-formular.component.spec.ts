@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SpendingItemComponent } from './spending-item.component';
+import { SpendingFormularComponent } from './spending-formular.component';
 
-describe('SpendingItemComponent', () => {
-  let component: SpendingItemComponent;
-  let fixture: ComponentFixture<SpendingItemComponent>;
+describe('SpendingFormularComponent', () => {
+  let component: SpendingFormularComponent;
+  let fixture: ComponentFixture<SpendingFormularComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SpendingItemComponent ]
+      declarations: [ SpendingFormularComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SpendingItemComponent);
+    fixture = TestBed.createComponent(SpendingFormularComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
